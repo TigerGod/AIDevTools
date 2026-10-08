@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns:meta="urn:xml-assistant:meta" name="XML 示例" version="1.0">
+  <book id="bk-001" category="technology" available="true">
+    <title lang="zh-CN">深入理解 XML</title>
+    <author>林晓</author>
+    <price currency="CNY">68.00</price>
+    <description>标签、属性 &amp; 文本搜索示例。</description>
+    <meta:rating score="4.8" />
+  </book>
+  <book id="bk-002" category="design" available="false">
+    <title lang="en">A Brighter Interface</title>
+    <author>Alex Chen</author>
+    <price currency="USD">29.90</price>
+    <description><![CDATA[支持 CDATA：<hello>world</hello>]]></description>
+    <meta:rating score="4.6" />
+  </book>
+  <book id="bk-003" category="technology" available="true">
+    <title lang="zh-CN">正则表达式入门</title>
+    <author>周明</author>
+    <price currency="CNY">49.00</price>
+    <description>试试搜索 bk-00[12]，并打开正则开关。</description>
+    <meta:rating score="4.9" />
+  </book>
+  <meta:updated>2026-10-08</meta:updated>
+</catalog>

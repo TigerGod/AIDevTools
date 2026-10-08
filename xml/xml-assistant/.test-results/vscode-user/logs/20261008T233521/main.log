@@ -1,0 +1,13 @@
+2026-10-08 23:35:21.889 [info] [node-compile-cache] main: packaged cache enabled (status: enabled, configured: E:\MicrosoftVSCode\07f806f999\resources\app\node-compile-cache\main, active: E:\MicrosoftVSCode\07f806f999\resources\app\node-compile-cache\main\v24.21.0-x64-2d60bbc0)
+2026-10-08 23:35:21.889 [info] StorageMainService: creating application shared storage
+2026-10-08 23:35:21.889 [info] [shared storage] Creating shared storage database at ':memory:' (wasCreated: true)
+2026-10-08 23:35:21.889 [info] [shared storage] Initializing fallback application storage (path: in-memory)
+2026-10-08 23:35:21.889 [error] Error: Error mutex already exists
+    at Js.installMutex (file:///E:/MicrosoftVSCode/07f806f999/resources/app/out/mainImpl.js:158:30658)
+2026-10-08 23:35:21.914 [info] [shared storage] Fallback application storage initialized with 3 items
+2026-10-08 23:35:22.762 [info] update#setState idle
+2026-10-08 23:35:22.795 [info] AgentHostProcessManager: agent host started
+2026-10-08 23:35:23.256 [error] [AgentHost:stderr] (node:27580) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `Code --trace-deprecation ...` to show where the warning was created)
+
+2026-10-08 23:35:25.287 [info] Extension host with pid 29276 exited with code: 0, signal: unknown.

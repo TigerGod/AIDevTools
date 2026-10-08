@@ -1,0 +1,11 @@
+2026-10-08 23:35:24.229 [info] [main] Log level: Info
+2026-10-08 23:35:24.229 [info] [main] Validating found git in: "C:\Program Files\Git\cmd\git.exe"
+2026-10-08 23:35:24.229 [info] [main] Validating found git in: "C:\Program Files (x86)\Git\cmd\git.exe"
+2026-10-08 23:35:24.229 [info] [main] Validating found git in: "C:\Program Files\Git\cmd\git.exe"
+2026-10-08 23:35:24.229 [info] [main] Validating found git in: "C:\Users\10121\AppData\Local\Programs\Git\cmd\git.exe"
+2026-10-08 23:35:24.269 [info] [main] Validating found git in: "D:\softwares\Git\cmd\git.exe"
+2026-10-08 23:35:24.314 [info] [askpassManager] Creating content-addressed askpass scripts at e:\AIDevTools\xml\xml-assistant\.test-results\vscode-user\User\globalStorage\vscode.git\askpass\70789581cae28aa7
+2026-10-08 23:35:24.348 [error] [askpassManager] Failed to create content-addressed askpass scripts: Error: EPERM: operation not permitted, open 'e:\AIDevTools\xml\xml-assistant\.test-results\vscode-user\User\globalStorage\vscode.git\askpass\70789581cae28aa7\askpass.sh'
+2026-10-08 23:35:24.384 [info] [main] Using git "2.56.0.windows.2" from "D:\softwares\Git\cmd\git.exe"
+2026-10-08 23:35:24.384 [info] [Model][doInitialScan] Initial repository scan started
+2026-10-08 23:35:24.385 [info] [Model][doInitialScan] Initial repository scan completed - repositories (0), closed repositories (0), parent repositories (0), unsafe repositories (0)

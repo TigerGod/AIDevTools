@@ -1,0 +1,10 @@
+{
+  "vscode": "1.140.0",
+  "checks": [
+    "Extension activates in real VS Code",
+    "Native Outline structure and UTF-16 source ranges",
+    "Settings changes refresh native symbol labels",
+    "Webview focus and refresh commands registered"
+  ],
+  "passed": true
+}

@@ -1,0 +1,8 @@
+{
+  "version": "0.2.0",
+  "configurations": [{
+    "name": "运行 XML Assistant", "type": "extensionHost", "request": "launch",
+    "args": ["--extensionDevelopmentPath=${workspaceFolder}", "${workspaceFolder}/examples/catalog.xml"],
+    "outFiles": ["${workspaceFolder}/dist/**/*.js"], "preLaunchTask": "npm: compile"
+  }]
+}

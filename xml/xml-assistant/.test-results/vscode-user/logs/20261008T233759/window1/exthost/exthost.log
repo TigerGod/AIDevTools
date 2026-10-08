@@ -1,0 +1,19 @@
+2026-10-08 23:38:00.792 [info] Extension host with pid 7392 started
+2026-10-08 23:38:00.854 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2026-10-08 23:38:00.867 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2026-10-08 23:38:00.915 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2026-10-08 23:38:00.954 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2026-10-08 23:38:00.975 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2026-10-08 23:38:01.109 [warning] [vscode.git] Accessing a resource scoped configuration without providing a resource is not expected. To get the effective value for 'git.openRepositoryInParentFolders', provide the URI of a resource or 'null' for any resource.
+2026-10-08 23:38:01.109 [warning] [vscode.git] Accessing a resource scoped configuration without providing a resource is not expected. To get the effective value for 'git.showProgress', provide the URI of a resource or 'null' for any resource.
+2026-10-08 23:38:01.127 [info] Eager extensions activated
+2026-10-08 23:38:01.127 [info] [node-compile-cache] extension-host: packaged cache enabled (status: enabled, configured: E:\MicrosoftVSCode\07f806f999\resources\app\node-compile-cache\extension-host, active: E:\MicrosoftVSCode\07f806f999\resources\app\node-compile-cache\extension-host\v24.21.0-x64-2d60bbc0)
+2026-10-08 23:38:01.211 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2026-10-08 23:38:01.212 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2026-10-08 23:38:01.217 [info] ExtensionService#_doActivateExtension xml-assistant-local.xml-assistant, startup: false, activationEvent: 'api'
+2026-10-08 23:38:01.256 [info] Extension 'xml-assistant-local.xml-assistant' uses a document selector without scheme. Learn more about this: https://go.microsoft.com/fwlink/?linkid=872305
+2026-10-08 23:38:01.467 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2026-10-08 23:38:01.473 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2026-10-08 23:38:01.524 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2026-10-08 23:38:01.934 [info] Extension host terminating: received terminate message from renderer
+2026-10-08 23:38:01.949 [info] Extension host with pid 7392 exiting with code 0

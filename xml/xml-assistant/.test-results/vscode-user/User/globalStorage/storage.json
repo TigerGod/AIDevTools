@@ -1,0 +1,46 @@
+{
+    "telemetry.machineId": "9eb7d6b96cda0bd999ff682e15131a0efdc12573482b326764c60ecb1e8e53d7",
+    "telemetry.sqmId": "{95EADF39-D82E-4987-93C1-C166C03972AE}",
+    "telemetry.devDeviceId": "c5108b7e-1306-41c7-b871-19be1d79535e",
+    "backupWorkspaces": {
+        "workspaces": [],
+        "folders": [],
+        "emptyWindows": []
+    },
+    "windowControlHeight": 35,
+    "theme": "vs-dark",
+    "themeBackground": "#121314",
+    "windowSplash": {
+        "zoomLevel": 0,
+        "baseTheme": "vs-dark",
+        "colorInfo": {
+            "foreground": "#bfbfbf",
+            "background": "#121314",
+            "editorBackground": "#121314",
+            "titleBarBackground": "#191a1b",
+            "titleBarInactiveBackground": "#121314",
+            "titleBarBorder": "#2a2b2c",
+            "activityBarBackground": "#191a1b",
+            "activityBarBorder": "#2a2b2c",
+            "modernActivityBarBackground": "#191a1b",
+            "modernActivityBarInactiveBackground": "#191a1b",
+            "modernActivityBarBorder": "#252526",
+            "modernPanelBorder": "#2a2b2c",
+            "modernUIShellBackground": "#191a1b",
+            "modernUIInactiveShellBackground": "#121314",
+            "sideBarBackground": "#191a1b",
+            "sideBarBorder": "#2a2b2c",
+            "panelBackground": "#191a1b",
+            "editorGroupBorder": "rgba(255, 255, 255, 0.09)",
+            "editorBorder": "#2a2b2c",
+            "surfaceBackground": "#191a1b",
+            "surfaceBorder": "#2a2b2c",
+            "agentsPanelBackground": "#191a1b",
+            "agentsPanelBorder": "#2a2b2c",
+            "statusBarBackground": "#191a1b",
+            "statusBarInactiveBackground": "#121314",
+            "statusBarBorder": "#2a2b2c",
+            "statusBarNoFolderBackground": "#191a1b"
+        }
+    }
+}
