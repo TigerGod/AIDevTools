@@ -1,0 +1,37 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const vscode = require('vscode');
+
+exports.run = async function () {
+  const checks = [];
+  const extension = vscode.extensions.getExtension('xml-assistant-local.xml-assistant');
+  assert.ok(extension, 'development extension must be discovered');
+  await extension.activate();
+  checks.push('Extension activates in real VS Code');
+  const source = '<root><item id="a">中文😀</item><item id="b"/></root>';
+  const document = await vscode.workspace.openTextDocument({ language: 'xml', content: source });
+  await vscode.window.showTextDocument(document);
+  const symbols = await vscode.commands.executeCommand('vscode.executeDocumentSymbolProvider', document.uri);
+  assert.equal(symbols[0].name, 'root');
+  assert.equal(symbols[0].children.length, 2);
+  assert.equal(document.getText(symbols[0].children[0].selectionRange), 'item');
+  assert.equal(document.getText(symbols[0].children[0].range), '<item id="a">中文😀</item>');
+  checks.push('Native Outline structure and UTF-16 source ranges');
+  await vscode.workspace.getConfiguration('xmlAssistant').update('showAttributes', true, vscode.ConfigurationTarget.Global);
+  const withAttributes = await vscode.commands.executeCommand('vscode.executeDocumentSymbolProvider', document.uri);
+  assert.ok(withAttributes[0].children[0].name.includes('id="a"'));
+  await vscode.workspace.getConfiguration('xmlAssistant').update('showText', true, vscode.ConfigurationTarget.Global);
+  const withText = await vscode.commands.executeCommand('vscode.executeDocumentSymbolProvider', document.uri);
+  assert.ok(withText[0].children[0].name.includes('中文😀'));
+  checks.push('Settings changes refresh native symbol labels');
+  await vscode.commands.executeCommand('xmlAssistant.focus');
+  await vscode.commands.executeCommand('xmlAssistant.refresh');
+  checks.push('Webview focus and refresh commands registered');
+  await vscode.workspace.getConfiguration('xmlAssistant').update('showAttributes', undefined, vscode.ConfigurationTarget.Global);
+  await vscode.workspace.getConfiguration('xmlAssistant').update('showText', undefined, vscode.ConfigurationTarget.Global);
+  const resultDirectory = path.join(__dirname, '../.test-results');
+  fs.mkdirSync(resultDirectory, { recursive: true });
+  fs.writeFileSync(path.join(resultDirectory, 'extension-host.json'), JSON.stringify({ vscode: vscode.version, checks, passed: true }, null, 2));
+  console.log(`XML Assistant: ${checks.length} real-host integration checks passed.`);
+};

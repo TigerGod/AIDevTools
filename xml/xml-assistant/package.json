@@ -1,0 +1,45 @@
+{
+  "name": "xml-assistant",
+  "displayName": "XML Assistant · XML 大纲",
+  "description": "可搜索的 XML 彩色大纲、标签统计、属性与文本显示控制。",
+  "version": "0.1.1",
+  "publisher": "xml-assistant-local",
+  "license": "Apache-2.0",
+  "repository": { "type": "git", "url": "https://gitee.com/livingme/xml-assistant.git" },
+  "engines": { "vscode": "^1.90.0" },
+  "categories": ["Other"],
+  "keywords": ["xml", "outline", "statistics", "search"],
+  "main": "./dist/extension.js",
+  "activationEvents": ["onLanguage:xml", "onLanguage:xsl", "onLanguage:svg"],
+  "capabilities": { "untrustedWorkspaces": { "supported": true }, "virtualWorkspaces": true },
+  "contributes": {
+    "commands": [
+      { "command": "xmlAssistant.focus", "title": "XML Assistant: 打开 XML 大纲", "icon": "$(list-tree)" },
+      { "command": "xmlAssistant.settings", "title": "XML Assistant: 显示设置", "icon": "$(settings-gear)" },
+      { "command": "xmlAssistant.refresh", "title": "XML Assistant: 刷新大纲", "icon": "$(refresh)" }
+    ],
+    "views": { "explorer": [{ "id": "xmlAssistant.outline", "name": "XML 大纲", "type": "webview", "icon": "media/xml.svg", "contextualTitle": "XML Assistant" }] },
+    "menus": {
+      "view/title": [
+        { "command": "xmlAssistant.settings", "when": "view == xmlAssistant.outline", "group": "navigation" },
+        { "command": "xmlAssistant.refresh", "when": "view == xmlAssistant.outline", "group": "navigation" }
+      ],
+      "editor/title": [{ "command": "xmlAssistant.focus", "when": "resourceExtname =~ /\\.(xml|xsd|xsl|xslt|svg|wsdl|xaml|config|plist|resx|props|targets|csproj|vbproj|fsproj|nuspec)$/i", "group": "navigation" }]
+    },
+    "configuration": {
+      "title": "XML Assistant",
+      "properties": {
+        "xmlAssistant.showAttributes": { "type": "boolean", "scope": "resource", "default": false, "description": "在 XML 大纲和原生 Outline 中显示所有属性。" },
+        "xmlAssistant.showText": { "type": "boolean", "scope": "resource", "default": false, "description": "在 XML 大纲和原生 Outline 中显示标签的直属文本（含 CDATA）。" },
+        "xmlAssistant.maxFileSizeMB": { "type": "number", "scope": "resource", "default": 20, "minimum": 1, "maximum": 100, "description": "解析文件的大小上限（MiB）。超限时显示提示。" }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p .", "watch": "tsc -watch -p .",
+    "test": "npm run compile && node --test test/*.test.cjs",
+    "vscode:prepublish": "npm run compile", "package": "vsce package --baseContentUrl https://gitee.com/livingme/xml-assistant/blob/master --baseImagesUrl https://gitee.com/livingme/xml-assistant/raw/master"
+  },
+  "dependencies": { "saxes": "^6.0.0" },
+  "devDependencies": { "@types/node": "^20.19.0", "@types/vscode": "~1.90.0", "@vscode/vsce": "^3.6.0", "jsdom": "^26.1.0", "typescript": "^5.8.3" }
+}
